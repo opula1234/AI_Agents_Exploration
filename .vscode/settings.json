@@ -1,0 +1,5 @@
+{
+    // Points VS Code / Pylance at the project venv on Windows.
+    "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+    "python.terminal.activateEnvironment": true
+}

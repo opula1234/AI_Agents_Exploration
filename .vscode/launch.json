@@ -1,0 +1,92 @@
+{
+    // VS Code debug configs. Set breakpoints (click left of a line number) then
+    // pick a config in the Run & Debug panel (Ctrl+Shift+D) and press F5.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // Debug the Gradio app directly so breakpoints bind in its callback.
+            "name": "Debug CrewAI Gradio app",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/CrewAI/coding_assist.py",
+            "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            // Debug the Gradio app directly so breakpoints bind in its callback.
+            "name": "Debug Multi Agent Langchain app",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/LangGraph/Multi_Agent.py",
+            "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            // Debug the standalone pipeline checks (Layer 0 + embeddings).
+            "name": "Debug debug.py (env checks)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/debug.py",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            // Debug ingestion. Edit the PDF path in "args" before running.
+            "name": "Debug debug.py ingest <PDF>",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/debug.py",
+            "args": [
+                "ingest",
+                "${workspaceFolder}/sample.pdf"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            // Debug retrieval + generation. Edit the question in "args" before running.
+            "name": "Debug debug.py query <question>",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/debug.py",
+            "args": [
+                "query",
+                "What is this document about?"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            // Use the project virtual environment on Windows.
+            "name": "Debug 01_embeddings",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/learn/01_embeddings.py",
+            "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            // Use the project virtual environment on Windows.
+            "name": "Debug 01_retrieval.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/learn/02_retrieval.py",
+            "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            // Use the project virtual environment on Windows.
+            "name": "Debug 01_rag.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/learn/03_rag.py",
+            "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }
+    ]
+}
